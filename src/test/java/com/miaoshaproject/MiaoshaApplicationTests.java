@@ -1,4 +1,4 @@
-package com.miaoshaproject.miaosha;
+package com.miaoshaproject;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
