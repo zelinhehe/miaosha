@@ -5,10 +5,10 @@
 <generatorConfiguration>
     <context id="DB2Tables" targetRuntime="MyBatis3">
         <!--注释-->
-        <commentGenerator>
-            <property name="suppressAllComments" value="true"/>
-            <property name="suppressDate" value="true"/>
-        </commentGenerator>
+        <!--<commentGenerator>-->
+            <!--<property name="suppressAllComments" value="true"/>-->
+            <!--<property name="suppressDate" value="true"/>-->
+        <!--</commentGenerator>-->
         <!--数据库连接-->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
                         connectionURL="jdbc:mysql://47.104.201.221:3306/miaosha"
