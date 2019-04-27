@@ -16,6 +16,7 @@ import java.util.Random;
 
 @Controller("user")
 @RequestMapping("/user")
+@CrossOrigin(allowCredentials = "true",allowedHeaders = "*",origins = {"*"}) // 支持跨域
 public class UserController extends BaseController{
 
     @Autowired
@@ -29,7 +30,7 @@ public class UserController extends BaseController{
     private HttpServletRequest httpServletRequest;
 
     // 用户获取otpCode短信
-    @RequestMapping("/getotp")
+    @RequestMapping(value = "/getotp", method = {RequestMethod.POST}, consumes = CONTENT_TYPE_FORMED)
     @ResponseBody
     public CommonReturnType getOtp(@RequestParam(name = "telphone") String telphone) {
         // 生成 otpCode
