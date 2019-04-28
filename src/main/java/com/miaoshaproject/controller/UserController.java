@@ -15,6 +15,7 @@ import sun.misc.BASE64Encoder;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Random;
@@ -54,7 +55,7 @@ public class UserController extends BaseController{
         userModel.setAge(age);
         userModel.setGender(gender);
         userModel.setTelphone(telphone);
-        userModel.setTelphone("byphone");
+        userModel.setRegisterMode("byphone");
 //        userModel.setEncrptPassword(MD5Encoder.encode(password.getBytes()));
         userModel.setEncrptPassword(EncodeByMD5(password));
         userService.register(userModel);

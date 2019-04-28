@@ -14,8 +14,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.beans.Transient;
-
 @Service
 public class UserServiceImpl implements UserService {
 
@@ -54,6 +52,7 @@ public class UserServiceImpl implements UserService {
         // model -> dataObject
         UserDO userDO = convertFromModel(userModel);
         userDOMapper.insertSelective(userDO);
+        userModel.setId(userDO.getId());
         UserPasswordDO userPasswordDO = convertPasswordFromModel(userModel);
         userPasswordDOMapper.insertSelective(userPasswordDO);
     }
