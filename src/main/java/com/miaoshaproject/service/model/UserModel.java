@@ -1,7 +1,10 @@
 package com.miaoshaproject.service.model;
 
+import javax.validation.constraints.NotBlank;
+
 public class UserModel {
     private Integer id;
+    @NotBlank(message = "用户名")
     private String name;
     private Byte gender;
     private Integer age;
