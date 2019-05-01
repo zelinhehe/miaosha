@@ -60,7 +60,7 @@
         // 绑定otp的click事件用于向后端发送获取手机短信验证码的请求
         $("#register").on("click",function () {
             var telphone = $("#telphone").val();
-            var pasword = $("#password").val();
+            var password = $("#password").val();
             var age = $("#age").val();
             var gender = $("#gender").val();
             var name = $("#name").val();
@@ -69,7 +69,7 @@
                 alert("手机号不能为空");
                 return false;
             }
-            if (pasword == null || password == ""){
+            if (password == null || password == ""){
                 alert("密码不能为空");
                 return false;
             }
@@ -95,7 +95,7 @@
                 url:"http://127.0.0.1:8090/user/register",
                 data:{
                     "telphone": telphone,
-                    "password": pasword,
+                    "password": password,
                     "age": age,
                     "gender": gender,
                     "name": name,
