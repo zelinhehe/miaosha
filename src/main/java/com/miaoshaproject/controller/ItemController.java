@@ -21,9 +21,10 @@ public class ItemController extends BaseController {
     @Autowired
     private ItemServiceImpl itemService;
 
-    @RequestMapping(value = "/create", method = {RequestMethod.POST})
+    // 商品创建
+    @RequestMapping(value = "/create", method = {RequestMethod.POST}, consumes = {CONTENT_TYPE_FORMED})
     @ResponseBody
-    public CommonReturnType create(@RequestParam(name = "title") String title,
+    public CommonReturnType createItem(@RequestParam(name = "title") String title,
                                    @RequestParam(name = "description") String description,
                                    @RequestParam(name = "price") BigDecimal price,
                                    @RequestParam(name = "stock") Integer stock,
@@ -41,6 +42,18 @@ public class ItemController extends BaseController {
 
         return CommonReturnType.create(itemVO);
     }
+
+    // 商品详情页
+    @RequestMapping(value = "/get", method = {RequestMethod.GET})
+    @ResponseBody
+    public CommonReturnType getItem(@RequestParam(name = "id") Integer id) {
+        ItemModel itemModel = itemService.getItemById(id);
+
+        ItemVO itemVO = convertItemVOFromItemModel(itemModel);
+
+        return CommonReturnType.create(itemVO);
+    }
+
 
     private ItemVO convertItemVOFromItemModel(ItemModel itemModel) {
         if (itemModel == null) {
