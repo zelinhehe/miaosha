@@ -1,5 +1,7 @@
 package com.miaoshaproject.controller.viewobject;
 
+import org.joda.time.DateTime;
+
 import java.math.BigDecimal;
 
 public class ItemVO {
@@ -20,6 +22,21 @@ public class ItemVO {
 
     // 商品销量
     private Integer sales;
+
+    // 商品图片Url
+    private String imgUrl;
+
+    // 是否在秒杀活动中。0：没有活动 1：活动未开始 2：活动进行中
+    private Integer promoStatus;
+
+    // 秒杀活动价格
+    private BigDecimal promoPrice;
+
+    // 秒杀活动id
+    private Integer promoId;
+
+    // 活动开始时间
+    private DateTime startTime;
 
     public Integer getId() {
         return id;
@@ -77,6 +94,35 @@ public class ItemVO {
         this.imgUrl = imgUrl;
     }
 
-    // 商品图片Url
-    private String imgUrl;
+    public Integer getPromoStatus() {
+        return promoStatus;
+    }
+
+    public void setPromoStatus(Integer promoStatus) {
+        this.promoStatus = promoStatus;
+    }
+
+    public BigDecimal getPromoPrice() {
+        return promoPrice;
+    }
+
+    public void setPromoPrice(BigDecimal promoPrice) {
+        this.promoPrice = promoPrice;
+    }
+
+    public Integer getPromoId() {
+        return promoId;
+    }
+
+    public void setPromoId(Integer promoId) {
+        this.promoId = promoId;
+    }
+
+    public DateTime getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(DateTime startTime) {
+        this.startTime = startTime;
+    }
 }
