@@ -55,7 +55,7 @@
         $("#create").on("click",function () {
             var title = $("#title").val();
             var description = $("#description").val();
-            var itemPrice = $("#itemPrice").val();
+            var price = $("#price").val();
             var imgUrl = $("#imgUrl").val();
             var stock = $("#stock").val();
             if (title == null || title == ""){
@@ -66,7 +66,7 @@
                 alert("不能为空");
                 return false;
             }
-            if (itemPrice == null || itemPrice == ""){
+            if (price == null || price == ""){
                 alert("不能为空");
                 return false;
             }
