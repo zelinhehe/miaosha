@@ -68,7 +68,7 @@ the GNU Lesser General Public License instead.)  You can apply it to
 your programs, too.
 
   When we speak of free software, we are referring to freedom, not
-price.  Our General Public Licenses are designed to make sure that you
+itemPrice.  Our General Public Licenses are designed to make sure that you
 have the freedom to distribute copies of free software (and charge for
 this service if you wish), that you receive source code or can get it
 if you want it, that you can change the software or use pieces of it
@@ -359,7 +359,7 @@ this license or the ordinary General Public License is the better
 strategy to use in any particular case, based on the explanations below.
 
   When we speak of free software, we are referring to freedom of use,
-not price.  Our General Public Licenses are designed to make sure that
+not itemPrice.  Our General Public Licenses are designed to make sure that
 you have the freedom to distribute copies of free software (and charge
 for this service if you wish); that you receive source code or can get
 it if you want it; that you can change the software and use pieces of
