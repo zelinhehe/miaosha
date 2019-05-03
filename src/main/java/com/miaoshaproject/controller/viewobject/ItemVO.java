@@ -1,7 +1,5 @@
 package com.miaoshaproject.controller.viewobject;
 
-import org.joda.time.DateTime;
-
 import java.math.BigDecimal;
 
 public class ItemVO {
@@ -36,7 +34,7 @@ public class ItemVO {
     private Integer promoId;
 
     // 活动开始时间
-    private DateTime startTime;
+    private String startDate;
 
     public Integer getId() {
         return id;
@@ -118,11 +116,11 @@ public class ItemVO {
         this.promoId = promoId;
     }
 
-    public DateTime getStartTime() {
-        return startTime;
+    public String getstartDate() {
+        return startDate;
     }
 
-    public void setStartTime(DateTime startTime) {
-        this.startTime = startTime;
+    public void setstartDate(String startDate) {
+        this.startDate = startDate;
     }
 }

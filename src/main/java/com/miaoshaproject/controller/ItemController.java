@@ -6,6 +6,8 @@ import com.miaoshaproject.response.CommonReturnType;
 import com.miaoshaproject.service.ItemService;
 import com.miaoshaproject.service.impl.ItemServiceImpl;
 import com.miaoshaproject.service.model.ItemModel;
+import org.joda.time.DateTimeZone;
+import org.joda.time.format.DateTimeFormat;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -83,7 +85,7 @@ public class ItemController extends BaseController {
             itemVO.setPromoId(itemModel.getPromoModel().getId());
             itemVO.setPromoStatus(itemModel.getPromoModel().getStatus());
             itemVO.setPromoPrice(itemModel.getPromoModel().getPromoItemPrice());
-            itemVO.setStartTime(itemModel.getPromoModel().getStartDate());
+            itemVO.setstartDate(itemModel.getPromoModel().getStartDate().withZone(DateTimeZone.forOffsetHours(-5)).toString(DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:ss")));
         } else {
             itemVO.setPromoStatus(0);
         }

@@ -43,7 +43,6 @@ public class PromoServiceImpl implements PromoService {
         }
         PromoModel promoModel = new PromoModel();
         BeanUtils.copyProperties(promoDO, promoModel);
-//        promoModel.setPromoName();
         promoModel.setStartDate(new DateTime(promoDO.getStartDate()));
         promoModel.setEndDate(new DateTime(promoDO.getEndDate()));
 
