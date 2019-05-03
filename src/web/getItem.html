@@ -89,7 +89,8 @@
                 url: "http://127.0.0.1:8090/order/create",
                 data: {
                     "itemId": g_itemVO.id,
-                    "amount": 1
+                    "amount": 1,
+                    "promoId": g_itemVO.promoId
                 },
                 xhrFields: {withCredentials: true},
                 success: function (data) {
