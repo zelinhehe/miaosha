@@ -14,7 +14,7 @@ public enum EmBusinessError implements CommonError {
 
     // 3开头的为交易的错误
     STOCK_NOT_ENOUGH(30001, "库存不足"),
-        ;
+    ;
 
     private int errCode;
     private String errMsg;
@@ -23,6 +23,7 @@ public enum EmBusinessError implements CommonError {
         this.errCode = errCode;
         this.errMsg = errMsg;
     }
+
     @Override
     public int getErrCode() {
         return this.errCode;
